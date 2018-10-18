@@ -13,6 +13,8 @@
 
 **룰루랄라~ 책 사러 가기~** [예스24](http://www.yes24.com/24/Goods/65551284) | [교보문고](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788966262281&orderClick=LAH&Kc=) | [알라딘](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=171196410) | [인터파크](http://book.interpark.com/product/BookDisplay.do?_method=detail&sc.shopNo=0000400000&sc.prdNo=294626264&sc.saNo=003002001&bid1=search&bid2=product&bid3=title&bid4=001)
 
+:white_check_mark: **2018.07.18** - [저자 직강 동영상](https://www.infoq.com/presentations/effective-java-third-edition?useSponsorshipSuggestions=true&utm_source=presentations_about_java&utm_medium=link&utm_campaign=java)이 공개됐습니다. 스트림과 람다에 집중하여 3판의 특징을 이야기하네요.
+
 ## 『이펙티브 자바 3판』의 주요 특징
 
 * 자바 7, 8, 9 신기능 반영
@@ -46,6 +48,6 @@
 
 ## 기타 유용한 정보
 
-* 이 번역서와 직접적인 관련은 없습니다만, 네이버 랩스의 백기선 님이 이 책의 원서를 기반으로 [동영상 강의](https://www.youtube.com/watch?v=X7RXP6EI-5E&list=PLfI752FpVCS8e5ACdi5dpwLdlVkn0QgJJ)를 진행 중입니다. 책만 읽기 따분한 분, 혹은 활자가 아닌 생생한 강의를 듣고 싶은 분께 강추합니다!
+* 이 번역서와 직접적인 관련은 없습니다만, 네이버 랩스의 백기선 님이 이 책의 원서를 기반으로 [동영상 강의](https://www.youtube.com/watch?v=X7RXP6EI-5E&list=PLfI752FpVCS8e5ACdi5dpwLdlVkn0QgJJ)를 시리즈로 진행 중입니다. 책만 읽기 따분한 분, 혹은 활자가 아닌 생생한 강의를 듣고 싶은 분께 강추합니다!
 * 국내 자바 개발자들과 소통하며 도움을 얻고자 하시는 분은 [Javawocky](https://www.facebook.com/groups/javawocky/)를 찾아주세요. 이 책의 번역 용어를 정하는 데도 많이 도와주셨습니다.
 * 진지하게 책 저술 혹은 번역에 관심 있으신 분은 [책쓰는 프로그래머 협회](https://www.facebook.com/groups/techbookwriting/)에 들러봐주세요.
