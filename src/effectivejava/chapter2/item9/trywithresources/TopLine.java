@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class TopLine {
-    // try-with-resources - the the best way to close resources!  (Page 35)
+    // 코드 9-3 try-with-resources - 자원을 회수하는 최선책! (48쪽)
     static String firstLineOfFile(String path) throws IOException {
         try (BufferedReader br = new BufferedReader(
                 new FileReader(path))) {
