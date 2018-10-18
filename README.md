@@ -13,7 +13,7 @@
 
 **룰루랄라~ 책 사러 가기~** [예스24](http://www.yes24.com/24/Goods/65551284) | [교보문고](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788966262281&orderClick=LAH&Kc=) | [알라딘](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=171196410) | [인터파크](http://book.interpark.com/product/BookDisplay.do?_method=detail&sc.shopNo=0000400000&sc.prdNo=294626264&sc.saNo=003002001&bid1=search&bid2=product&bid3=title&bid4=001)
 
-:white_check_mark: **2018.07.18** - [저자 직강 동영상](https://www.infoq.com/presentations/effective-java-third-edition?useSponsorshipSuggestions=true&utm_source=presentations_about_java&utm_medium=link&utm_campaign=java)이 공개됐습니다. 스트림과 람다에 집중하여 3판의 특징을 이야기하네요.
+:white_check_mark: **2018.07.18** - [저자 직강 동영상](https://www.infoq.com/presentations/effective-java-third-edition?useSponsorshipSuggestions=true&utm_source=presentations_about_java&utm_medium=link&utm_campaign=java)이 공개됐습니다. 스트림과 람다에 집중하여 3판의 특징을 이야기하네요. 어느 분 말씀에 따르면 발표를 귀엽고 신나게 하신다고... ;)
 
 ## 『이펙티브 자바 3판』의 주요 특징
 
