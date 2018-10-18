@@ -1,6 +1,6 @@
 package effectivejava.chapter2.item8;
 
-// cleaner를 안전망으로 갖춘 잘 작동하는 클라이언트 (45쪽)
+// cleaner 안전망을 갖춘 자원을 제대로 활용하는 클라이언트 (45쪽)
 public class Adult {
     public static void main(String[] args) {
         try (Room myRoom = new Room(7)) {
