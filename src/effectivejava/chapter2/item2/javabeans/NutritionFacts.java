@@ -1,10 +1,10 @@
 package effectivejava.chapter2.item2.javabeans;
 
-// JavaBeans Pattern - allows inconsistency, mandates mutability  (pages 11-12)
+// 코드 2-2 자바빈즈 패턴 - 일관성이 깨지고, 불변으로 만들 수 없다. (16쪽)
 public class NutritionFacts {
-    // Parameters initialized to default values (if any)
-    private int servingSize  = -1; // Required; no default value
-    private int servings     = -1; // Required; no default value
+    // 매개변수들은 (기본값이 있다면) 기본값으로 초기화된다.
+    private int servingSize  = -1; // 필수; 기본값 없음
+    private int servings     = -1; // 필수; 기본값 없음
     private int calories     = 0;
     private int fat          = 0;
     private int sodium       = 0;
