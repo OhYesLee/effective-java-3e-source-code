@@ -1,11 +1,11 @@
 package effectivejava.chapter2.item4;
 
-// Noninstantiable utility class (Page 19)
+// 코드 4-1 인스턴스를 만들 수 없는 유틸리티 클래스 (26~27쪽)
 public class UtilityClass {
-    // Suppress default constructor for noninstantiability
+    // 기본 생성자가 만들어지는 것을 막는다(인스턴스화 방지용).
     private UtilityClass() {
         throw new AssertionError();
     }
 
-    // Remainder omitted
+    // 나머지 코드는 생략
 }
