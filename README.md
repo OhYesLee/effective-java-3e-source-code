@@ -26,7 +26,7 @@
 
 ## 한국어판에 가미된 특징
 
-* 자바 10과 11에서의 변경 사항 반영
+* 자바 10과 11에서의 변경 사항 반영(본문 내용과 관련된 사항에 한함!)
 * [번역 용어 해설](https://docs.google.com/document/d/1Nw-_FJKre9x7Uy6DZ0NuAFyYUCjBPCpINxqrP0JFuXk/edit) 제공
 * API 문서화 설명(아이템 56)에 영어용과 한글용 모두 수록
 * 본문부터 색인까지, 읽기 쉽도록 원서보다 신경 쓴 편집
