@@ -2,7 +2,7 @@ package effectivejava.chapter2.item6;
 
 import java.util.Comparator;
 
-// Hideously slow program! Can you spot the object creation? (Page 24)
+// 코드 6-3 끔찍이 느리다! 객체가 만들어지는 위치를 찾았는가? (34쪽)
 public class Sum {
     private static long sum() {
         Long sum = 0L;
@@ -22,7 +22,7 @@ public class Sum {
             System.out.println((end - start) / 1_000_000. + " ms.");
         }
 
-        // Prevents VM from optimizing away everything.
+        // VM이 최적화하지 못하게 막는 코드
         if (x == 42)
             System.out.println();
     }
