@@ -5,7 +5,7 @@ import java.io.*;
 public class Copy {
     private static final int BUFFER_SIZE = 8 * 1024;
 
-    // try-with-resources on multiple resources - short and sweet (Page 35)
+    // 코드 9-4 복수의 자원을 처리하는 try-with-resources - 짧고 매혹적이다! (49쪽)
     static void copy(String src, String dst) throws IOException {
         try (InputStream   in = new FileInputStream(src);
              OutputStream out = new FileOutputStream(dst)) {
