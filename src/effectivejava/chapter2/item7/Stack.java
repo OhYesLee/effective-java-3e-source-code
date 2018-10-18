@@ -1,7 +1,7 @@
 package effectivejava.chapter2.item7;
 import java.util.*;
 
-// Can you spot the "memory leak"?  (Pages 26-27)
+// 코드 7-1 메모리 누수가 일어나는 위치는 어디인가? (36쪽)
 public class Stack {
     private Object[] elements;
     private int size = 0;
@@ -23,20 +23,20 @@ public class Stack {
     }
 
     /**
-     * Ensure space for at least one more element, roughly
-     * doubling the capacity each time the array needs to grow.
+     * 원소를 위한 공간을 적어도 하나 이상 확보한다.
+     * 배열 크기를 늘려야 할 때마다 대략 두 배씩 늘린다.
      */
     private void ensureCapacity() {
         if (elements.length == size)
             elements = Arrays.copyOf(elements, 2 * size + 1);
     }
 
-//    // Corrected version of pop method (Page 27)
+//    // 코드 7-2 제대로 구현한 pop 메서드 (37쪽)
 //    public Object pop() {
 //        if (size == 0)
 //            throw new EmptyStackException();
 //        Object result = elements[--size];
-//        elements[size] = null; // Eliminate obsolete reference
+//        elements[size] = null; // 다 쓴 참조 해제
 //        return result;
 //    }
 
