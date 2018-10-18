@@ -1,6 +1,6 @@
 package effectivejava.chapter2.item2.builder;
 
-// Builder Pattern  (Page 13)
+// 코드 2-3 빌더 패턴 - 점층적 생성자 패턴과 자바빈즈 패턴의 장점만 취했다. (17~18쪽)
 public class NutritionFacts {
     private final int servingSize;
     private final int servings;
@@ -10,11 +10,11 @@ public class NutritionFacts {
     private final int carbohydrate;
 
     public static class Builder {
-        // Required parameters
+        // 필수 매개변수
         private final int servingSize;
         private final int servings;
 
-        // Optional parameters - initialized to default values
+        // 선택 매개변수 - 기본값으로 초기화한다.
         private int calories      = 0;
         private int fat           = 0;
         private int sodium        = 0;
