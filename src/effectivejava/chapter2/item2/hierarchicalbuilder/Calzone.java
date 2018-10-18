@@ -1,11 +1,11 @@
 package effectivejava.chapter2.item2.hierarchicalbuilder;
 
-// Subclass with hierarchical builder (Page 15)
+// 코드 2-5 칼초네 피자 - 계층적 빌더를 활용한 하위 클래스 (20쪽)
 public class Calzone extends Pizza {
     private final boolean sauceInside;
 
     public static class Builder extends Pizza.Builder<Builder> {
-        private boolean sauceInside = false; // Default
+        private boolean sauceInside = false; // 기본값
 
         public Builder sauceInside() {
             sauceInside = true;
@@ -25,7 +25,7 @@ public class Calzone extends Pizza {
     }
 
     @Override public String toString() {
-        return String.format("Calzone with %s and sauce on the %s",
-                toppings, sauceInside ? "inside" : "outside");
+        return String.format("%s로 토핑한 칼초네 피자 (소스는 %s에)",
+                toppings, sauceInside ? "안" : "바깥");
     }
 }
