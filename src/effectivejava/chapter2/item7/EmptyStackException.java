@@ -1,5 +1,5 @@
 package effectivejava.chapter2.item7;
 
-// (Thrown by Stack program on Page 26)
+// (36쪽의 Stack 코드에서 던지는 예외)
 public class EmptyStackException extends IllegalStateException {
 }
