@@ -9,7 +9,7 @@
 ---
 
 ## 새소식
-:white_check_mark: **2018.10.19** - 설명이 필요 없는 필독서 『이펙티브 자바 3판』의 11월 1일에 드디어 출간됩니다. 먼저, 원서보다 출간이 상당히 늦어진 점 죄송합니다. 그에 대한 보상이라긴 뭣하지만, 70여 개의 [원서 오류](https://docs.google.com/document/d/1mAeEgQu4H4ADxa03k7YaVDjIP5vJBvjVIjg3DIvoc8E/edit)를 바로잡을 수 있었고 최근 릴리스된 자바 11까지의 변경도 반영했습니다. 저자가 소스코드를 2018년 8월에서야 공개해서 제가 직접 준비하던 것은 버렸는데, 다행히 저자가 공개한 코드가 훨씬 깔끔하네요. ^^
+:white_check_mark: **2018.10.19** - 한국어판이 11월 1일에 드디어 출간됩니다. 원서보다 출간이 상당히 늦어진 점 죄송합니다. 그에 대한 보상이라긴 뭣하지만, 70여 개의 [원서 오류](https://docs.google.com/document/d/1mAeEgQu4H4ADxa03k7YaVDjIP5vJBvjVIjg3DIvoc8E/edit)를 바로잡을 수 있었고 최근 릴리스된 자바 11까지의 변경도 반영했습니다. 저자가 소스코드를 2018년 8월에서야 공개해서 제가 직접 준비하던 것은 버렸는데, 다행히 저자가 공개한 코드가 훨씬 깔끔하네요. ^^
 
 **룰루랄라~ 책 사러 가기~** [예스24](http://www.yes24.com/24/Goods/65551284) | [교보문고](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788966262281&orderClick=LAH&Kc=) | [알라딘](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=171196410) | [인터파크](http://book.interpark.com/product/BookDisplay.do?_method=detail&sc.shopNo=0000400000&sc.prdNo=294626264&sc.saNo=003002001&bid1=search&bid2=product&bid3=title&bid4=001)
 
