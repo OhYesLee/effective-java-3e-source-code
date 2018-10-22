@@ -2,11 +2,11 @@ package effectivejava.chapter5.item33;
 import java.lang.annotation.*;
 import java.lang.reflect.*;
 
-// Use of asSubclass to safely cast to a bounded type token (Page 155)
+// 코드 33-5 asSubclass를 사용해 한정적 타입 토큰을 안전하게 형변환한다. (204쪽)
 public class PrintAnnotation {
     static Annotation getAnnotation(AnnotatedElement element,
                                     String annotationTypeName) {
-        Class<?> annotationType = null; // Unbounded type token
+        Class<?> annotationType = null; // 비한정적 타입 토큰
         try {
             annotationType = Class.forName(annotationTypeName);
         } catch (Exception ex) {
@@ -16,11 +16,11 @@ public class PrintAnnotation {
                 annotationType.asSubclass(Annotation.class));
     }
 
-    // Test program to print named annotation of named class
+    // 명시한 클래스의 명시한 애너테이션을 출력하는 테스트 프로그램
     public static void main(String[] args) throws Exception {
         if (args.length != 2) {
             System.out.println(
-                "Usage: java PrintAnnotation <class> <annotation>");
+                "사용법: java PrintAnnotation <class> <annotation>");
             System.exit(1);
         }
         String className = args[0];
