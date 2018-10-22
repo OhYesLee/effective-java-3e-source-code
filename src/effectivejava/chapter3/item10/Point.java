@@ -1,6 +1,6 @@
 package effectivejava.chapter3.item10;
 
-// Simple immutable two-dimensional integer point class (Page 37)
+// 단순한 불변 2차원 정수 점(point) 클래스 (56쪽)
 public class Point {
     private final int x;
     private final int y;
@@ -17,7 +17,7 @@ public class Point {
         return p.x == x && p.y == y;
     }
 
-//    // Broken - violates Liskov substitution principle (page 43)
+//    // 잘못된 코드 - 리스코프 치환 원칙 위배! (59쪽)
 //    @Override public boolean equals(Object o) {
 //        if (o == null || o.getClass() != getClass())
 //            return false;
@@ -25,7 +25,7 @@ public class Point {
 //        return p.x == x && p.y == y;
 //    }
 
-    // See Item 11
+    // 아이템 11 참조
     @Override public int hashCode()  {
         return 31 * x + y;
     }
