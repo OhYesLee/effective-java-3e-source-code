@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
-// Safe version of PickTwo using lists instead of arrays (Page 150)
+// 배열 대신 List를 이용해 안전하게 바꿘 PickTwo (196쪽)
 public class SafePickTwo {
     static <T> List<T> pickTwo(T a, T b, T c) {
         switch(ThreadLocalRandom.current().nextInt(3)) {
@@ -16,7 +16,7 @@ public class SafePickTwo {
     }
 
     public static void main(String[] args) {
-        List<String> attributes = pickTwo("Good", "Fast", "Cheap");
+        List<String> attributes = pickTwo("좋은", "빠른", "저렴한");
         System.out.println(attributes);
     }
 }
