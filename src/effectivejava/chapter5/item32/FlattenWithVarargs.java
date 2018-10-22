@@ -3,7 +3,7 @@ package effectivejava.chapter5.item32;
 import java.util.ArrayList;
 import java.util.List;
 
-// Safe method with a generic varargs parameter (page 149)
+// 코드 32-3 제네릭 varargs 매개변수를 안전하게 사용하는 메서드 (195쪽)
 public class FlattenWithVarargs {
     @SafeVarargs
     static <T> List<T> flatten(List<? extends T>... lists) {
