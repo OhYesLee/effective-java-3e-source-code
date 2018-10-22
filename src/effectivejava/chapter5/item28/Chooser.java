@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
-// List-based Chooser - typesafe (Page 129)
+// 코드 28-6 리스트 기반 Chooser - 타입 안전성 확보! (168쪽)
 public class Chooser<T> {
     private final List<T> choiceList;
 
