@@ -3,15 +3,15 @@ import effectivejava.chapter5.item29.EmptyStackException;
 
 import java.util.Arrays;
 
-// Generic stack using E[] (Pages 130-3)
+// E[]를 이용한 제네릭 스택 (170-174쪽)
 public class Stack<E> {
     private E[] elements;
     private int size = 0;
     private static final int DEFAULT_INITIAL_CAPACITY = 16;
 
-    // The elements array will contain only E instances from push(E).
-    // This is sufficient to ensure type safety, but the runtime
-    // type of the array won't be E[]; it will always be Object[]!
+    // 배열 elements는 push(E)로 넘어온 E 인스턴스만 담는다.
+    // 따라서 타입 안전성을 보장하지만,
+    // 이 배열의 런타임 타입은 E[]가 아닌 Object[]다!
     @SuppressWarnings("unchecked")
     public Stack() {
         elements = (E[]) new Object[DEFAULT_INITIAL_CAPACITY];
@@ -26,7 +26,7 @@ public class Stack<E> {
         if (size == 0)
             throw new EmptyStackException();
         E result = elements[--size];
-        elements[size] = null; // Eliminate obsolete reference
+        elements[size] = null; // 다 쓴 참조 해제
         return result;
     }
 
@@ -39,7 +39,7 @@ public class Stack<E> {
             elements = Arrays.copyOf(elements, 2 * size + 1);
     }
 
-    // Little program to exercise our generic Stack
+    // 코드 29-5 제네릭 Stack을 사용하는 맛보기 프로그램 (174쪽)
     public static void main(String[] args) {
         Stack<String> stack = new Stack<>();
         for (String arg : args)
