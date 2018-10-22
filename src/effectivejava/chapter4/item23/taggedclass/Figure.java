@@ -1,26 +1,26 @@
 package effectivejava.chapter4.item23.taggedclass;
 
-// Tagged class - vastly inferior to a class hierarchy! (Page 109)
+// 코드 23-1 태그 달린 클래스 - 클래스 계층구조보다 훨씬 나쁘다! (142-143쪽)
 class Figure {
     enum Shape { RECTANGLE, CIRCLE };
 
-    // Tag field - the shape of this figure
+    // 태그 필드 - 현재 모양을 나타낸다.
     final Shape shape;
 
-    // These fields are used only if shape is RECTANGLE
+    // 다음 필드들은 모양이 사각형(RECTANGLE)일 때만 쓰인다.
     double length;
     double width;
 
-    // This field is used only if shape is CIRCLE
+    // 다음 필드는 모양이 원(CIRCLE)일 때만 쓰인다.
     double radius;
 
-    // Constructor for circle
+    // 원용 생성자
     Figure(double radius) {
         shape = Shape.CIRCLE;
         this.radius = radius;
     }
 
-    // Constructor for rectangle
+    // 사각형용 생성자
     Figure(double length, double width) {
         shape = Shape.RECTANGLE;
         this.length = length;
