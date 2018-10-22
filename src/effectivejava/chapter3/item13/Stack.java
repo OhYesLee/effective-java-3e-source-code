@@ -1,7 +1,7 @@
 package effectivejava.chapter3.item13;
 import java.util.Arrays;
 
-// A cloneable version of Stack (Pages 60-61)
+// Stack의 복제 가능 버전 (80-81쪽)
 public class Stack implements Cloneable {
     private Object[] elements;
     private int size = 0;
@@ -20,7 +20,7 @@ public class Stack implements Cloneable {
         if (size == 0)
             throw new EmptyStackException();
         Object result = elements[--size];
-        elements[size] = null; // Eliminate obsolete reference
+        elements[size] = null; // 다 쓴 참조 해제
         return result;
     }
 
@@ -28,7 +28,7 @@ public class Stack implements Cloneable {
         return size ==0;
     }
 
-    // Clone method for class with references to mutable state
+    // 코드 13-2 가변 상태를 참조하는 클래스용 clone 메서드
     @Override public Stack clone() {
         try {
             Stack result = (Stack) super.clone();
@@ -39,13 +39,13 @@ public class Stack implements Cloneable {
         }
     }
 
-    // Ensure space for at least one more element.
+    // 원소를 위한 공간을 적어도 하나 이상 확보한다.
     private void ensureCapacity() {
         if (elements.length == size)
             elements = Arrays.copyOf(elements, 2 * size + 1);
     }
     
-    // To see that clone works, call with several command line arguments
+    // clone이 동작하는 모습을 보려면 명령줄 인수를 몇 개 덧붙여서 호출해야 한다.
     public static void main(String[] args) {
         Stack stack = new Stack();
         for (String arg : args)
