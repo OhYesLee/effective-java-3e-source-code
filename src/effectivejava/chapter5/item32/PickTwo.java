@@ -3,7 +3,7 @@ package effectivejava.chapter5.item32;
 import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
 
-// 미묘하 힙 오염 발생 (193-194쪽)
+// 미묘한 힙 오염 발생 (193-194쪽)
 public class PickTwo {
     // 코드 32-2 자신의 제네릭 매개변수 배열의 참조를 노출한다. - 안전하지 않다! (193쪽)
     static <T> T[] toArray(T... args) {
