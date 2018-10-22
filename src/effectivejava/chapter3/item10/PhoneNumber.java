@@ -1,13 +1,13 @@
 package effectivejava.chapter3.item10;
 
-// Class with a typical equals method (Page 48)
+// 코드 10-6 전형적인 equals 메서드의 예 (64쪽)
 public final class PhoneNumber {
     private final short areaCode, prefix, lineNum;
 
     public PhoneNumber(int areaCode, int prefix, int lineNum) {
-        this.areaCode = rangeCheck(areaCode, 999, "area code");
-        this.prefix   = rangeCheck(prefix,   999, "prefix");
-        this.lineNum  = rangeCheck(lineNum, 9999, "line num");
+        this.areaCode = rangeCheck(areaCode, 999, "지역코드");
+        this.prefix   = rangeCheck(prefix,   999, "프리픽스");
+        this.lineNum  = rangeCheck(lineNum, 9999, "가입자 번호");
     }
 
     private static short rangeCheck(int val, int max, String arg) {
@@ -26,5 +26,5 @@ public final class PhoneNumber {
                 && pn.areaCode == areaCode;
     }
 
-    // Remainder omitted - note that hashCode is REQUIRED (Item 11)!
+    // 나머지 코드는 생략 - hashCode 메서드는 꼭 필요하다(아이템 11)!
 }
