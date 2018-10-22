@@ -1,12 +1,12 @@
 package effectivejava.chapter5.item30;
 import java.util.*;
 
-// Using a recursive type bound to express mutual comparability (Pages 137-8)
+// 재귀적 타입 한정을 이용해 상호 비교할 수 있음을 표현 (179쪽)
 public class RecursiveTypeBound {
-    // Returns max value in a collection - uses recursive type bound
+    // 코드 30-7 컬렉션에서 최댓값을 반환한다. - 재귀적 타입 한정 사용 (179쪽)
     public static <E extends Comparable<E>> E max(Collection<E> c) {
         if (c.isEmpty())
-            throw new IllegalArgumentException("Empty collection");
+            throw new IllegalArgumentException("컬렉션이 비어 있습니다.");
 
         E result = null;
         for (E e : c)
