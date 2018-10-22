@@ -2,9 +2,9 @@ package effectivejava.chapter5.item30;
 
 import java.util.function.UnaryOperator;
 
-// Generic singleton factory pattern (Page 136-7)
+// 제네릭 싱글턴 팩터리 패턴 (178쪽)
 public class GenericSingletonFactory {
-    // Generic singleton factory pattern
+    // 코드 30-4 제네릭 싱글턴 팩터리 패턴 (178쪽)
     private static UnaryOperator<Object> IDENTITY_FN = (t) -> t;
 
     @SuppressWarnings("unchecked")
@@ -12,9 +12,9 @@ public class GenericSingletonFactory {
         return (UnaryOperator<T>) IDENTITY_FN;
     }
 
-    // Sample program to exercise generic singleton
+    // 코드 30-5 제네릭 싱글턴을 사용하는 예 (178쪽)
     public static void main(String[] args) {
-        String[] strings = { "jute", "hemp", "nylon" };
+        String[] strings = { "삼베", "대마", "나일론" };
         UnaryOperator<String> sameString = identityFunction();
         for (String s : strings)
             System.out.println(sameString.apply(s));
