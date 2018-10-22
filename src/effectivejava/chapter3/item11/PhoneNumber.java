@@ -1,7 +1,7 @@
 package effectivejava.chapter3.item11;
 import java.util.*;
 
-// Shows the need for overriding hashcode when you override equals (Pages 50-53 )
+// equals를 재정의하면 hashCode로 재정의해야 함을 보여준다. (70-71쪽)
 public final class PhoneNumber {
     private final short areaCode, prefix, lineNum;
 
@@ -28,9 +28,9 @@ public final class PhoneNumber {
     }
 
 
-    // Broken with no hashCode; works with any of the three below
+    // hashCode 없이는 제대로 동작하지 않는다. 다음 셋 중 하나를 활성화하자.
 
-//    // Typical hashCode method (Page 52)
+//    // 코드 11-2 전형적인 hashCode 메서드 (70쪽)
 //    @Override public int hashCode() {
 //        int result = Short.hashCode(areaCode);
 //        result = 31 * result + Short.hashCode(prefix);
@@ -38,13 +38,13 @@ public final class PhoneNumber {
 //        return result;
 //    }
 
-//    // One-line hashCode method - mediocre performance  (page 53)
+//    // 코드 11-3 한 줄짜리 hashCode 메서드 - 성능이 살짝 아쉽다. (71쪽)
 //    @Override public int hashCode() {
 //        return Objects.hash(lineNum, prefix, areaCode);
 //    }
 
-//    // hashCode method with lazily initialized cached hash code  (page 53)
-//    private int hashCode; // Automatically initialized to 0
+//    // 해시코드를 지연 초기화하는 hashCode 메서드 - 스레드 안정성까지 고려해야 한다. (71쪽)
+//    private int hashCode; // 자동으로 0으로 초기화된다.
 //
 //    @Override public int hashCode() {
 //        int result = hashCode;
@@ -59,7 +59,7 @@ public final class PhoneNumber {
 
     public static void main(String[] args) {
         Map<PhoneNumber, String> m = new HashMap<>();
-        m.put(new PhoneNumber(707, 867, 5309), "Jenny");
+        m.put(new PhoneNumber(707, 867, 5309), "제니");
         System.out.println(m.get(new PhoneNumber(707, 867, 5309)));
     }
 }
