@@ -1,6 +1,6 @@
 package effectivejava.chapter4.item17;
 
-// Immutable complex number class (Pages 81-82)
+// 코드 17-1 불변 복소수 클래스 (106-107쪽)
 public final class Complex {
     private final double re;
     private final double im;
@@ -21,7 +21,7 @@ public final class Complex {
         return new Complex(re + c.re, im + c.im);
     }
 
-    // Static factory, used in conjunction with private constructor (Page 85)
+    // 코드 17-2 정적 팩터리(private 생성자와 함께 사용해야 한다.) (110-111쪽)
     public static Complex valueOf(double re, double im) {
         return new Complex(re, im);
     }
@@ -48,7 +48,7 @@ public final class Complex {
             return false;
         Complex c = (Complex) o;
 
-        // See page 47 to find out why we use compare instead of ==
+        // == 대신 compare를 사용하는 이유는 63쪽을 확인하라.
         return Double.compare(c.re, re) == 0
                 && Double.compare(c.im, im) == 0;
     }
