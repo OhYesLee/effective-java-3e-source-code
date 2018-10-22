@@ -1,9 +1,9 @@
 package effectivejava.chapter4.item18;
 import java.util.*;
 
-// Broken - Inappropriate use of inheritance! (Page 87)
+// 코드 18-1 잘못된 예 - 상속을 잘못 사용했다! (114쪽)
 public class InstrumentedHashSet<E> extends HashSet<E> {
-    // The number of attempted element insertions
+    // 추가된 원소의 수
     private int addCount = 0;
 
     public InstrumentedHashSet() {
@@ -29,7 +29,7 @@ public class InstrumentedHashSet<E> extends HashSet<E> {
 
     public static void main(String[] args) {
         InstrumentedHashSet<String> s = new InstrumentedHashSet<>();
-        s.addAll(List.of("Snap", "Crackle", "Pop"));
+        s.addAll(List.of("틱", "탁탁", "펑"));
         System.out.println(s.getAddCount());
     }
 }
