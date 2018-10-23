@@ -1,6 +1,6 @@
 package effectivejava.chapter6.item34;
 
-// Switch on an enum to simulate a missing method (Page 167)
+// 코드 34-10 switch 문을 이용해 원래 열거 타입에 없는 기능을 수행한다. (219쪽)
 public class Inverse {
     public static Operation inverse(Operation op) {
         switch(op) {
