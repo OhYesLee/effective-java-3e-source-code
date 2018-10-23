@@ -4,7 +4,7 @@ import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toMap;
 
-// Enum type with constant-specific class bodies and data (Pages 163-4)
+// 코드 34-6 상수별 클래스 몸체(class body)와 데이터를 사용한 열거 타입 (215-216쪽)
 public enum Operation {
     PLUS("+") {
         public double apply(double x, double y) { return x + y; }
@@ -27,12 +27,12 @@ public enum Operation {
 
     public abstract double apply(double x, double y);
 
-    // Implementing a fromString method on an enum type (Page 164)
+    // 코드 34-7 열거 타입용 fromString 메서드 구현하기 (216쪽)
     private static final Map<String, Operation> stringToEnum =
             Stream.of(values()).collect(
                     toMap(Object::toString, e -> e));
 
-    // Returns Operation for string, if any
+    // 지정한 문자열에 해당하는 Operation을 (존재한다면) 반환한다.
     public static Optional<Operation> fromString(String symbol) {
         return Optional.ofNullable(stringToEnum.get(symbol));
     }
