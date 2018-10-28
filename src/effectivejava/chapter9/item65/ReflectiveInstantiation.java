@@ -5,42 +5,42 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.Set;
 
-// Reflective instantiaion demo (Page 283)
+// 리플렉션으로 활용한 인스턴스화 데모
 public class ReflectiveInstantiation {
-    // Reflective instantiation with interface access
+    // 코드 65-1 리플렉션으로 생성하고 인터페이스로 참조해 활용한다. (372-373쪽)
     public static void main(String[] args) {
-        // Translate the class name into a Class object
+        // 클래스 이름을 Class 객체로 변환
         Class<? extends Set<String>> cl = null;
         try {
-            cl = (Class<? extends Set<String>>)  // Unchecked cast!
+            cl = (Class<? extends Set<String>>)  // 비검사 형변환!
                     Class.forName(args[0]);
         } catch (ClassNotFoundException e) {
-            fatalError("Class not found.");
+            fatalError("클래스를 찾을 수 없습니다.");
         }
 
-        // Get the constructor
+        // 생성자를 얻는다.
         Constructor<? extends Set<String>> cons = null;
         try {
             cons = cl.getDeclaredConstructor();
         } catch (NoSuchMethodException e) {
-            fatalError("No parameterless constructor");
+            fatalError("매개변수 없는 생성자를 찾을 수 없습니다.");
         }
 
-        // Instantiate the set
+        // 집합의 인스턴스를 만든다.
         Set<String> s = null;
         try {
             s = cons.newInstance();
         } catch (IllegalAccessException e) {
-            fatalError("Constructor not accessible");
+            fatalError("생성자에 접근할 수 없습니다.");
         } catch (InstantiationException e) {
-            fatalError("Class not instantiable.");
+            fatalError("클래스를 인스턴스화할 수 없습니다.");
         } catch (InvocationTargetException e) {
-            fatalError("Constructor threw " + e.getCause());
+            fatalError("생성자가 예외를 던졌습니다: " + e.getCause());
         } catch (ClassCastException e) {
-            fatalError("Class doesn't implement Set");
+            fatalError("Set을 구현하지 않은 클래스입니다.");
         }
 
-        // Exercise the set
+        // 생성한 집합을 사용한다.
         s.addAll(Arrays.asList(args).subList(1, args.length));
         System.out.println(s);
     }
