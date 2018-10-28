@@ -3,14 +3,16 @@ package effectivejava.chapter7.item47;
 import java.util.*;
 
 public class PowerSet {
-    // Returns the power set of an input set as custom collection (Page 218)
+    // 코드 47-5 입력 집합의 멱집합을 전용 컬렉션에 담아 반환한다. (287쪽)
     public static final <E> Collection<Set<E>> of(Set<E> s) {
         List<E> src = new ArrayList<>(s);
         if (src.size() > 30)
-            throw new IllegalArgumentException("Set too big " + s);
+            throw new IllegalArgumentException(
+                "집합에 원소가 너무 많습니다(최대 30개).: " + s);
         return new AbstractList<Set<E>>() {
             @Override public int size() {
-                return 1 << src.size(); // 2 to the power srcSize
+                // 멱집합의 크기는 2를 원래 집합의 원소 수만큼 거듭제곱 것과 같다.
+                return 1 << src.size();
             }
 
             @Override public boolean contains(Object o) {
