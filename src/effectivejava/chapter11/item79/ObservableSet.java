@@ -2,7 +2,7 @@ package effectivejava.chapter11.item79;
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-// 원소가 추가되면 알려주는 집합 (420-425쪽)
+// 관찰자 패턴을 구현하여, 원소가 추가되면 알려주는 집합 (420-425쪽)
 public class ObservableSet<E> extends ForwardingSet<E> {
     public ObservableSet(Set<E> set) { super(set); }
 
