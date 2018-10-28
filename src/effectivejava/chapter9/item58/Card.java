@@ -6,7 +6,7 @@ public class Card {
     private final Suit suit;
     private final Rank rank;
 
-    // Can you spot the bug?
+    // 코드 58-4 버그를 찾아보자. (348쪽)
     enum Suit { CLUB, DIAMOND, HEART, SPADE }
     enum Rank { ACE, DEUCE, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT,
         NINE, TEN, JACK, QUEEN, KING }
@@ -26,7 +26,7 @@ public class Card {
             for (Iterator<Rank> j = ranks.iterator(); j.hasNext(); )
                 deck.add(new Card(i.next(), j.next()));
 
-//        // Preferred idiom for nested iteration on collections and arrays
+//        // 코드 58-7 컬렉션이나 배열의 중첩 반복을 위한 권장 관용구 (349쪽)
 //        for (Suit suit : suits)
 //            for (Rank rank : ranks)
 //                deck.add(new Card(suit, rank));
