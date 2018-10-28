@@ -1,7 +1,7 @@
 package effectivejava.chapter11.item78.fixedstopthread2;
 import java.util.concurrent.*;
 
-// Cooperative thread termination with a volatile field
+// 코드 78-3 volatile 필드를 사용해 스레드가 정상 종료한다. (417쪽)
 public class StopThread {
     private static volatile boolean stopRequested;
 
