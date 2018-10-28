@@ -5,15 +5,15 @@ import java.math.*;
 // 코드 52-1 컬렉션 분류기 - 오류! 이 프로그램은 무엇을 출력할까? (312쪽)
 public class CollectionClassifier {
     public static String classify(Set<?> s) {
-        return "집합(Set)";
+        return "집합";
     }
 
     public static String classify(List<?> lst) {
-        return "리스트(List)";
+        return "리스트";
     }
 
     public static String classify(Collection<?> c) {
-        return "그 외 컬렉션";
+        return "그 외";
     }
 
     public static void main(String[] args) {
