@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Stream;
 import static java.util.stream.Collectors.*;
 
-// Generating the Cartesian product of two lists using iteration and streams (Page 209)
+// 반복 방식과 스트림 방식으로 두 리스트의 데카르트 곱을 생성한다. (275쪽)
 public class Card {
     public enum Suit { SPADE, HEART, DIAMOND, CLUB }
     public enum Rank { ACE, DEUCE, THREE, FOUR, FIVE, SIX, SEVEN,
@@ -25,7 +25,7 @@ public class Card {
     }
     private static final List<Card> NEW_DECK = newDeck();
 
-    // Iterative Cartesian product computation
+    // 코드 45-4 데카르트 곱 계산을 반복 방식으로 구현 (275쪽)
     private static List<Card> newDeck() {
         List<Card> result = new ArrayList<>();
         for (Suit suit : Suit.values())
@@ -34,7 +34,7 @@ public class Card {
         return result;
     }
 
-//    // Stream-based Cartesian product computation
+//    // 데카르트 곱 계산을 스트림 방식으로 구현
 //    private static List<Card> newDeck() {
 //        return Stream.of(Suit.values())
 //                .flatMap(suit ->
