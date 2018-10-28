@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Stream;
 import static java.util.stream.Collectors.*;
 
-// 반복 방식과 스트림 방식으로 두 리스트의 데카르트 곱을 생성한다. (275쪽)
+// 반복 방식과 스트림 방식으로 두 리스트의 데카르트 곱을 생성한다. (275-276쪽)
 public class Card {
     public enum Suit { SPADE, HEART, DIAMOND, CLUB }
     public enum Rank { ACE, DEUCE, THREE, FOUR, FIVE, SIX, SEVEN,
@@ -34,7 +34,7 @@ public class Card {
         return result;
     }
 
-//    // 데카르트 곱 계산을 스트림 방식으로 구현
+//    // 코드 45-5 데카르트 곱 계산을 스트림 방식으로 구현 (276쪽)
 //    private static List<Card> newDeck() {
 //        return Stream.of(Suit.values())
 //                .flatMap(suit ->
