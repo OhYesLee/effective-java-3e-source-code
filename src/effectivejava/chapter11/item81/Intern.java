@@ -1,9 +1,9 @@
 package effectivejava.chapter11.item81;
 import java.util.concurrent.*;
 
-// Concurrent canonicalizing map atop ConcurrentMap - Pages 273-274
+// ConcurrentMap으로 구현한 동시성 정규화 맵
 public class Intern {
-    // Concurrent canonicalizing map atop ConcurrentMap - not optimal
+    // 코드 81-1 ConcurrentMap으로 구현한 동시성 정규화 맵 - 최적은 아니다. (432쪽)
     private static final ConcurrentMap<String, String> map =
             new ConcurrentHashMap<>();
 
@@ -12,7 +12,7 @@ public class Intern {
 //        return previousValue == null ? s : previousValue;
 //    }
 
-    // Concurrent canonicalizing map atop ConcurrentMap - faster!
+    // 코드 81-2 ConcurrentMap으로 구현한 동시성 정규화 맵 - 더 빠르다! (432쪽)
     public static String intern(String s) {
         String result = map.get(s);
         if (result == null) {
