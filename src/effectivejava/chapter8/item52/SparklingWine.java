@@ -1,6 +1,6 @@
 package effectivejava.chapter8.item52;
 
-// Classification using method overrriding (Page 239)
+// 메서드 재정의를 이용한 분류 (313쪽)
 class SparklingWine extends Wine {
-    @Override String name() { return "sparkling wine"; }
+    @Override String name() { return "발포성 포도주"; }
 }
