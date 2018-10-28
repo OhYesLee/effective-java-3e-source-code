@@ -3,7 +3,7 @@ import effectivejava.chapter6.item39.markerannotation.Test;
 
 import java.lang.reflect.*;
 
-// Program to process marker annotations and annotations with array parameter (Page 185)
+// 마커 애너테이션과 배열 매개변수를 받는 애너테이션을 처리하는 프로그램 (243쪽)
 public class RunTests {
     public static void main(String[] args) throws Exception {
         int tests = 0;
@@ -17,18 +17,18 @@ public class RunTests {
                     passed++;
                 } catch (InvocationTargetException wrappedExc) {
                     Throwable exc = wrappedExc.getCause();
-                    System.out.println(m + " failed: " + exc);
+                    System.out.println(m + " 실패: " + exc);
                 } catch (Exception exc) {
-                    System.out.println("Invalid @Test: " + m);
+                    System.out.println("잘못 사용한 @Test: " + m);
                 }
             }
 
-            // Code to process annotations with array parameter (Page 185)
+            // 배열 매개변수를 받는 애너테이션을 처리하는 코드 (243쪽)
             if (m.isAnnotationPresent(ExceptionTest.class)) {
                 tests++;
                 try {
                     m.invoke(null);
-                    System.out.printf("Test %s failed: no exception%n", m);
+                    System.out.printf("테스트 %s 실패: 예외를 던지지 않음%n", m);
                 } catch (Throwable wrappedExc) {
                     Throwable exc = wrappedExc.getCause();
                     int oldPassed = passed;
@@ -41,11 +41,11 @@ public class RunTests {
                         }
                     }
                     if (passed == oldPassed)
-                        System.out.printf("Test %s failed: %s %n", m, exc);
+                        System.out.printf("테스트 %s 실패: %s %n", m, exc);
                 }
             }
         }
-        System.out.printf("Passed: %d, Failed: %d%n",
+        System.out.printf("성공: %d, 실패: %d%n",
                 passed, tests - passed);
     }
 }
