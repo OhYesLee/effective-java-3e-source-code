@@ -52,4 +52,4 @@
 
 * 이 번역서와 직접적인 관련은 없습니다만, 네이버 랩스의 백기선 님이 이 책의 원서를 기반으로 [동영상 강의](https://www.youtube.com/watch?v=X7RXP6EI-5E&list=PLfI752FpVCS8e5ACdi5dpwLdlVkn0QgJJ)를 시리즈로 진행 중입니다. 책만 읽기 따분한 분, 혹은 활자가 아닌 생생한 강의를 듣고 싶은 분께 강추합니다!
 * 국내 자바 개발자들과 소통하며 도움을 얻고자 하시는 분은 [Javawocky](https://www.facebook.com/groups/javawocky/)를 찾아주세요. 이 책의 번역 용어를 정하는 데도 많이 도와주셨습니다.
-* 진지하게 책 저술 혹은 번역에 관심 있으신 분은 [책쓰는 프로그래머 협회](https://www.facebook.com/groups/techbookwriting/)에 들러봐주세요.
+* 진지하게 책 저술 혹은 번역에 관심 있으신 분은 [책쓰는 프로그래머 협회](https://www.facebook.com/groups/techbookwriting/)에 들러봐주세요. (제가 쓴 [번역 가이드](https://www.slideshare.net/wegra/ss-52826286)와 [집필 가이드](https://github.com/hanbitmedia/Writing-IT-Books)도 한번 살펴보세요~ ^^
