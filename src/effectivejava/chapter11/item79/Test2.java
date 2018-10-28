@@ -1,7 +1,7 @@
 package effectivejava.chapter11.item79;
 import java.util.*;
 
-// More complex test of ObservableSet - Page 318-9
+// ObservableSet 동작 확인 #2 - 정숫값이 23이면 자신의 구독을 해지한다. (422쪽)
 public class Test2 {
     public static void main(String[] args) {
         ObservableSet<Integer> set =
@@ -10,7 +10,7 @@ public class Test2 {
         set.addObserver(new SetObserver<>() {
             public void added(ObservableSet<Integer> s, Integer e) {
                 System.out.println(e);
-                if (e == 23)
+                if (e == 23) // 값이 23이면 자신을 구독해지한다.
                     s.removeObserver(this);
             }
         });
