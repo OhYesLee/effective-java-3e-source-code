@@ -1,7 +1,7 @@
 package effectivejava.chapter6.item38;
 import java.util.*;
 
-// Emulated extensible enum (Pages 176-9)
+// 코드 38-2 확장 가능 열거 타입 (233-235쪽)
 public enum ExtendedOperation implements Operation {
     EXP("^") {
         public double apply(double x, double y) {
@@ -21,7 +21,7 @@ public enum ExtendedOperation implements Operation {
         return symbol;
     }
 
-//    // Using an enum class object to represent a collection of extended enums (page 178)
+//    // 열거 타입의 Class 객체를 이용해 확장된 열거 타입의 모든 원소를 사용하는 예 (234쪽)
 //    public static void main(String[] args) {
 //        double x = Double.parseDouble(args[0]);
 //        double y = Double.parseDouble(args[1]);
@@ -34,7 +34,7 @@ public enum ExtendedOperation implements Operation {
 //                    x, op, y, op.apply(x, y));
 //    }
 
-    // Using a collection instance to represent a collection of extended enums (page 178)
+    // 컬렉션 인스턴스를 이용해 확장된 열거 타입의 모든 원소를 사용하는 예 (235쪽)
     public static void main(String[] args) {
         double x = Double.parseDouble(args[0]);
         double y = Double.parseDouble(args[1]);
