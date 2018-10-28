@@ -1,7 +1,7 @@
 package effectivejava.chapter11.item79;
 import java.util.*;
 
-// Simple test of ObservableSet - Page 318
+// ObservableSet 동작 확인 #1 - 0부터 99까지 출력한다. (422쪽)
 public class Test1 {
     public static void main(String[] args) {
         ObservableSet<Integer> set =
