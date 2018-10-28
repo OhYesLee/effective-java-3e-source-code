@@ -3,7 +3,7 @@ package effectivejava.chapter6.item39.annotationwithparameter;
 import effectivejava.chapter6.item39.markerannotation.Test;
 import java.lang.reflect.*;
 
-// Program to process marker annotations and annotations with a parameter (Page 184)
+// 마커 애너테이션과 매개변수 하나짜리 애너태이션을 처리하는 프로그램 (241-242쪽)
 public class RunTests {
     public static void main(String[] args) throws Exception {
         int tests = 0;
@@ -17,9 +17,9 @@ public class RunTests {
                     passed++;
                 } catch (InvocationTargetException wrappedExc) {
                     Throwable exc = wrappedExc.getCause();
-                    System.out.println(m + " failed: " + exc);
+                    System.out.println(m + " 실패: " + exc);
                 } catch (Exception exc) {
-                    System.out.println("Invalid @Test: " + m);
+                    System.out.println("잘못 사용한 @Test: " + m);
                 }
             }
 
@@ -27,7 +27,7 @@ public class RunTests {
                 tests++;
                 try {
                     m.invoke(null);
-                    System.out.printf("Test %s failed: no exception%n", m);
+                    System.out.printf("테스트 %s 실패: 예외를 던지지 않음%n", m);
                 } catch (InvocationTargetException wrappedEx) {
                     Throwable exc = wrappedEx.getCause();
                     Class<? extends Throwable> excType =
@@ -36,16 +36,16 @@ public class RunTests {
                         passed++;
                     } else {
                         System.out.printf(
-                                "Test %s failed: expected %s, got %s%n",
+                                "테스트 %s 실패: 기대한 예외 %s, 발생한 예외 %s%n",
                                 m, excType.getName(), exc);
                     }
                 } catch (Exception exc) {
-                    System.out.println("Invalid @ExceptionTest: " + m);
+                    System.out.println("잘못 사용한 @ExceptionTest: " + m);
                 }
             }
         }
 
-        System.out.printf("Passed: %d, Failed: %d%n",
+        System.out.printf("성공: %d, 실패: %d%n",
                 passed, tests - passed);
     }
 }
