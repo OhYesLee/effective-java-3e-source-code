@@ -4,9 +4,9 @@ import java.util.*;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-// Two ways to generate a stream of all the sublists of a list (Pages 219-20)
+// 리스트의 모든 부분리스트를 원소를 갖는 스트림을 생성하는 두 가지 방법 (288-289쪽)
 public class SubLists {
-    // Returns a stream of all the sublists of its input list (Page 219)
+    // 코드 47-6 입력 리스트의 모든 부분리스트를 스트림으로 반환한다. (288-289쪽)
     public static <E> Stream<List<E>> of(List<E> list) {
         return Stream.concat(Stream.of(Collections.emptyList()),
                 prefixes(list).flatMap(SubLists::suffixes));
@@ -22,8 +22,8 @@ public class SubLists {
                 .mapToObj(start -> list.subList(start, list.size()));
     }
 
-//    // Returns a stream of all the sublists of its input list, excluding the empty list
-//    // This version is derived from the obvious iterative code (Page 220)
+//    // 코드 47-7 입력 리스트의 모든 부분리스트를 스트림으로 반환한다(빈 리스트는 제외). (289쪽)
+//    // 289쪽의 명확한 반복 코드의 변형이다.
 //    public static <E> Stream<List<E>> of(List<E> list) {
 //        return IntStream.range(0, list.size())
 //                .mapToObj(start ->
