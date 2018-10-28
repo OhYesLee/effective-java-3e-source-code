@@ -4,7 +4,7 @@ import static effectivejava.chapter12.Util.*;
 import java.util.HashSet;
 import java.util.Set;
 
-// Deserialization bomb - deserializing this stream takes forever - Page 340
+// 코드 85-1 역직렬화 폭탄 - 이 스트림의 역직렬화는 영원히 계속된다. (451-452쪽)
 public class DeserializationBomb {
     public static void main(String[] args) throws Exception {
         System.out.println(bomb().length);
@@ -18,7 +18,7 @@ public class DeserializationBomb {
         for (int i = 0; i < 100; i++) {
             Set<Object> t1 = new HashSet<>();
             Set<Object> t2 = new HashSet<>();
-            t1.add("foo"); // make it not equal to t2
+            t1.add("foo"); // t1을 t2와 다르게 만든다.
             s1.add(t1);
             s1.add(t2);
             s2.add(t1);
