@@ -3,7 +3,7 @@ package effectivejava.chapter6.item40;
 import java.util.HashSet;
 import java.util.Set;
 
-// Fixed Bigram class (Page 189)
+// 버그를 고친 바이그램 클래스 (247쪽)
 public class Bigram2 {
     private final char first;
     private final char second;
