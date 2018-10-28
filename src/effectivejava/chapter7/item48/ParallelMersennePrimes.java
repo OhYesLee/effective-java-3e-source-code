@@ -5,7 +5,7 @@ import java.util.stream.Stream;
 
 import static java.math.BigInteger.*;
 
-// 병렬 스트림을 사용해 처음 20개의 메르센 소수를 생성하는 프로그램 (291쪽의 코드 48-1을 병렬화했다.)
+// 병렬 스트림을 사용해 처음 20개의 메르센 소수를 생성하는 프로그램 (291쪽 코드 48-1의 병렬화 버전)
 // 주의: 병렬화의 영향으로 프로그램이 종료하지 않는다.
 public class ParallelMersennePrimes {
     public static void main(String[] args) {
