@@ -1,7 +1,7 @@
 package effectivejava.chapter11.item78.fixedstopthread1;
 import java.util.concurrent.*;
 
-// Properly synchronized cooperative thread termination
+// 코드 78-2 적절히 동기화해 스레드가 정상 종료한다. (416쪽)
 public class StopThread {
     private static boolean stopRequested;
 
