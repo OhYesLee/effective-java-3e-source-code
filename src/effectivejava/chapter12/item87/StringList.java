@@ -1,35 +1,34 @@
 package effectivejava.chapter12.item87;
 import java.io.*;
 
-// StringList with a reasonable custom serialized form  - Page 349
+// 코드 87-3 합리적인 커스텀 직렬화 형태를 갖춘 StringList (462-463쪽)
 public final class StringList implements Serializable {
     private transient int size   = 0;
     private transient Entry head = null;
 
-    // No longer Serializable!
+    // 이제는 직렬화되지 않는다.
     private static class Entry {
         String data;
         Entry  next;
         Entry  previous;
     }
 
-    // Appends the specified string to the list
+    // 지정한 문자열을 이 리스트에 추가한다.
     public final void add(String s) {  }
 
     /**
-     * Serialize this {@code StringList} instance.
+     * 이 {@code StringList} 인스턴스를 직렬화한다.
      *
-     * @serialData The size of the list (the number of strings
-     * it contains) is emitted ({@code int}), followed by all of
-     * its elements (each a {@code String}), in the proper
-     * sequence.
+     * @serialData 이 리스트의 크기(포함된 문자열의 개수)를 기록한 후
+     * ({@code int}), 이어서 모든 원소를(각각은 {@code String})
+     * 순서대로 기록한다.
      */
     private void writeObject(ObjectOutputStream s)
             throws IOException {
         s.defaultWriteObject();
         s.writeInt(size);
 
-        // Write out all elements in the proper order.
+        // 모든 원소를 올바른 순서로 기록한다.
         for (Entry e = head; e != null; e = e.next)
             s.writeObject(e.data);
     }
@@ -39,10 +38,10 @@ public final class StringList implements Serializable {
         s.defaultReadObject();
         int numElements = s.readInt();
 
-        // Read in all elements and insert them in list
+        // 모든 원소를 읽어 이 리스트에 삽입한다.
         for (int i = 0; i < numElements; i++)
             add((String) s.readObject());
     }
 
-    // Remainder omitted
+    // 나머지 코드는 생략
 }
