@@ -26,6 +26,6 @@ public class DeserializationBomb {
             s1 = t1;
             s2 = t2;
         }
-        return serialize(root); // 간결하게 하기 위해 이 메서드의 코드는 생략함
+        return serialize(root); // 이 메서드는 effectivejava.chapter12.Util 클래스에 정의되어 있다.
     }
 }
