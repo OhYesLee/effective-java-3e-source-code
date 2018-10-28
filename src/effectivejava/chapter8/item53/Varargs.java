@@ -2,9 +2,9 @@ package effectivejava.chapter8.item53;
 
 import java.util.stream.IntStream;
 
-// Sample uses of varargs (Pages 245-6)
+// 가변인수 활용 예 (320-321쪽)
 public class Varargs {
-    // Simple use of varargs (Page 245)
+    // 코드 53-1 간단한 가변인수 활용 예 (320쪽)
     static int sum(int... args) {
         int sum = 0;
         for (int arg : args)
@@ -12,10 +12,10 @@ public class Varargs {
         return sum;
     }
 
-//    // The WRONG way to use varargs to pass one or more arguments! (Page 245)
+//    // 코드 53-2 인수가 1개 이상이어야 하는 가변인수 메서드 - 잘못 구현한 예! (320쪽)
 //    static int min(int... args) {
 //        if (args.length == 0)
-//            throw new IllegalArgumentException("Too few arguments");
+//            throw new IllegalArgumentException("인수가 1개 이상 필요합니다.");
 //        int min = args[0];
 //        for (int i = 1; i < args.length; i++)
 //            if (args[i] < min)
@@ -23,7 +23,7 @@ public class Varargs {
 //        return min;
 //    }
 
-    // The right way to use varargs to pass one or more arguments (Page 246)
+    // 코드 53-3 인수가 1개 이상이어야 할 때 가변인수를 제대로 사용하는 방법 (321쪽)
     static int min(int firstArg, int... remainingArgs) {
         int min = firstArg;
         for (int arg : remainingArgs)
