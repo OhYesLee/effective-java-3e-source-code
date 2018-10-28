@@ -1,7 +1,7 @@
 package effectivejava.chapter8.item52;
 import java.util.*;
 
-// What does this program print? (Page 241)
+// 이 프로그램은 무엇을 출력할까? (315-316쪽)
 public class SetList {
     public static void main(String[] args) {
         Set<Integer> set = new TreeSet<>();
