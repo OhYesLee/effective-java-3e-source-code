@@ -5,7 +5,7 @@ import java.util.stream.Stream;
 
 import static java.math.BigInteger.*;
 
-// Generating the first twent Mersenne primes using streams (Page 208)
+// 스트림을 사용해 처음 20개의 메르센 소수를 생성한다. (274쪽)
 public class MersennePrimes {
     static Stream<BigInteger> primes() {
         return Stream.iterate(TWO, BigInteger::nextProbablePrime);
