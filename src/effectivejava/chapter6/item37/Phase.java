@@ -4,7 +4,7 @@ import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.*;
 
-// Using a nested EnumMap to associate data with enum pairs - (Pages 174-5)
+// 코드 37-6 중첩 EnumMap으로 데이터와 열거 타입 쌍을 연결했다. (229-231쪽)
 public enum Phase {
     SOLID, LIQUID, GAS;
     public enum Transition {
@@ -12,7 +12,7 @@ public enum Phase {
         BOIL(LIQUID, GAS), CONDENSE(GAS, LIQUID),
         SUBLIME(SOLID, GAS), DEPOSIT(GAS, SOLID);
 
-//        // Adding a new phase (Page 175)
+//        // 코드 37-7 EnumMap 버전에 새로운 상태 추가하기 (231쪽)
 //        SOLID, LIQUID, GAS, PLASMA;
 //        public enum Transition {
 //            MELT(SOLID, LIQUID), FREEZE(LIQUID, SOLID),
@@ -27,7 +27,7 @@ public enum Phase {
             this.to = to;
         }
 
-        // Initialize the phase transition map
+        // 상전이 맵을 초기화한다.
         private static final Map<Phase, Map<Phase, Transition>>
                 m = Stream.of(values()).collect(groupingBy(t -> t.from,
                 () -> new EnumMap<>(Phase.class),
@@ -39,13 +39,13 @@ public enum Phase {
         }
     }
 
-    // Simple demo program - prints a sloppy table
+    // 간단한 데모 프로그램 - 깔끔하지 못한 표를 출력한다.
     public static void main(String[] args) {
         for (Phase src : Phase.values()) {
             for (Phase dst : Phase.values()) {
                 Transition transition = Transition.from(src, dst);
                 if (transition != null)
-                    System.out.printf("%s to %s : %s %n", src, dst, transition);
+                    System.out.printf("%s에서 %s로 : %s %n", src, dst, transition);
             }
         }
     }
