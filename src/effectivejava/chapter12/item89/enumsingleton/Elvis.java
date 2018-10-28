@@ -2,7 +2,7 @@ package effectivejava.chapter12.item89.enumsingleton;
 
 import java.util.*;
 
-// Enum singleton - the preferred approach - Page 311
+// 코드 89-4 열거 타입 싱글턴(선호 방식) - 전통적인 싱글턴보다 우수하다. (478쪽)
 public enum Elvis {
     INSTANCE;
     private String[] favoriteSongs =
