@@ -1,6 +1,6 @@
 package effectivejava.chapter12.item90;
 
-// Period class with serialization proxy - Pages 363-364
+// 직렬화 프록시를 사용한 Period 클래스 (479-480쪽)
 
 import java.util.*;
 import java.io.*;
@@ -21,7 +21,7 @@ public final class Period implements Serializable {
         this.end   = new Date(end.getTime());
         if (this.start.compareTo(this.end) > 0)
             throw new IllegalArgumentException(
-                    start + ""가 " + end + "보다 늦다.");
+                    start + "가 " + end + "보다 늦다.");
     }
 
     public Date start () { return new Date(start.getTime()); }
