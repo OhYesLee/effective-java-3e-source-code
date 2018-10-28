@@ -1,6 +1,6 @@
 package effectivejava.chapter6.item38;
 
-// Emulated extensible enum using an interface - Basic implementation (Page 176)
+// 코드 38-1 인터페이스를 이용해 확장 가능 열거 타입을 흉내 냈다. - 기본 구현 (233쪽)
 public enum BasicOperation implements Operation {
     PLUS("+") {
         public double apply(double x, double y) { return x + y; }
