@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.groupingBy;
 
-// Tasteful use of streams enhances clarity and conciseness (Page 205)
+// 코드 45-3 스트림을 적절히 활용하면 깔끔하고 명료해진다. (271쪽)
 public class HybridAnagrams {
     public static void main(String[] args) throws IOException {
         Path dictionary = Paths.get(args[0]);
