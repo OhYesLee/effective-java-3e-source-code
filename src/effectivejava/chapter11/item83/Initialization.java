@@ -1,12 +1,12 @@
 package effectivejava.chapter11.item83;
 
-// Initialization styles - Pages 333-
+// 다양한 초기화 방식 (443-445쪽)
 public class Initialization {
 
-    // Normal initialization of an instance field4 - Page 282
+    // 코드 83-1 인스턴스 필드를 초기화하는 일반적인 방법 (443쪽)
     private final FieldType field1 = computeFieldValue();
 
-    // Lazy initialization of instance field4 - synchronized accessor - Page 333
+    // 코드 83-2 인스턴스 필드의 지연 초기화 - synchronized 접근자 방식 (443쪽)
     private FieldType field2;
     private synchronized FieldType getField2() {
         if (field2 == null)
@@ -14,7 +14,7 @@ public class Initialization {
         return field2;
     }
 
-    // Lazy initialization holder class idiom for static fields - Page 334
+    // 코드 83-3 정적 필드용 지연 초기화 홀더 클래스 관용구 (443쪽)
     private static class FieldHolder {
         static final FieldType field = computeFieldValue();
     }
@@ -22,23 +22,23 @@ public class Initialization {
     private static FieldType getField() { return FieldHolder.field; }
 
 
-    // Double-check idiom for lazy initialization of instance fields - Page 334
+    // 코드 83-4 인스턴스 필드 지연 초기화용 이중검사 관용구 (444쪽)
     private volatile FieldType field4;
 
     private FieldType getField4() {
         FieldType result = field4;
-        if (result != null)    // First check (no locking)
+        if (result != null)    // 첫 번째 검사 (락 사용 안 함)
             return result;
 
         synchronized(this) {
-            if (field4 == null) // Second check (with locking)
+            if (field4 == null) // 두 번째 검사 (락 사용)
                 field4 = computeFieldValue();
             return field4;
         }
     }
 
 
-    // Single-check idiom - can cause repeated initialization! - Page 334
+    // 코드 83-5 단일검사 관용구 - 초기화가 중복해서 일어날 수 있다! (445쪽)
     private volatile FieldType field5;
 
     private FieldType getField5() {
