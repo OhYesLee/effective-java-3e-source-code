@@ -2,10 +2,11 @@ package effectivejava.chapter11.item79;
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-// Broken - invokes alien method from synchronized block!
+// 원소가 추가되면 알려주는 집합 (420-425쪽)
 public class ObservableSet<E> extends ForwardingSet<E> {
     public ObservableSet(Set<E> set) { super(set); }
 
+// 코드 79-1 잘못된 코드. 동기화 블록 안에서 외계인 메서드를 호출한다. (420쪽)
 //    private final List<SetObserver<E>> observers
 //            = new ArrayList<>();
 
@@ -28,7 +29,7 @@ public class ObservableSet<E> extends ForwardingSet<E> {
 //        }
 //    }
 
-//    // Alien method moved outside of synchronized block - open calls
+//    // 코드 79-3 외계인 메서드를 동기화 블록 바깥으로 옮겼다. - 열린 호출 (424쪽)
 //    private void notifyElementAdded(E element) {
 //        List<SetObserver<E>> snapshot = null;
 //        synchronized(observers) {
@@ -38,7 +39,7 @@ public class ObservableSet<E> extends ForwardingSet<E> {
 //            observer.added(this, element);
 //    }
 
-    // Thread-safe observable set with CopyOnWriteArrayList
+    // 코드 79-4 CopyOnWriteArrayList를 사용해 구현한 스레드 안전하고 관찰 가능한 집합 (425쪽)
     private final List<SetObserver<E>> observers =
             new CopyOnWriteArrayList<>();
 
@@ -65,7 +66,7 @@ public class ObservableSet<E> extends ForwardingSet<E> {
     @Override public boolean addAll(Collection<? extends E> c) {
         boolean result = false;
         for (E element : c)
-            result |= add(element);  // Calls notifyElementAdded
+            result |= add(element);  // notifyElementAdded를 호출한다.
         return result;
     }
 }
