@@ -3,6 +3,7 @@ package effectivejava.chapter9.item60;
 import java.math.BigDecimal;
 
 public class BigDecimalChange {
+    // 코드 60-2 BigDecimal을 사용한 해법. 속도가 느리고 쓰기 불편하다. (356쪽)
     public static void main(String[] args) {
         final BigDecimal TEN_CENTS = new BigDecimal(".10");
 
@@ -14,7 +15,7 @@ public class BigDecimalChange {
             funds = funds.subtract(price);
             itemsBought++;
         }
-        System.out.println(itemsBought + " items bought.");
-        System.out.println("Money left over: $" + funds);
+        System.out.println(itemsBought + "개 구입");
+        System.out.println("잔돈(달러): " + funds);
     }
 }
