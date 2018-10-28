@@ -9,7 +9,7 @@ public class Change {
             funds -= price;
             itemsBought++;
         }
-        System.out.println(itemsBought + " items bought.");
-        System.out.println("Change: $" + funds);
+        System.out.println(itemsBought + "개 구입");
+        System.out.println("잔돈(달러): " + funds);
     }
 }
