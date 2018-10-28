@@ -5,11 +5,12 @@ import java.util.stream.Stream;
 
 import static java.math.BigInteger.*;
 
-// Parallel stream-based program to generate the first 20 Mersenne primes - HANGS!!! (Page 222)
+// 병렬 스트림을 사용해 처음 20개의 메르센 소수를 생성하는 프로그램 (291쪽의 코드 48-1을 병렬화했다.)
+// 주의: 병렬화의 영향으로 프로그램이 종료하지 않는다.
 public class ParallelMersennePrimes {
     public static void main(String[] args) {
         primes().map(p -> TWO.pow(p.intValueExact()).subtract(ONE))
-                .parallel()
+                .parallel() // 스트림 병렬화
                 .filter(mersenne -> mersenne.isProbablePrime(50))
                 .limit(20)
                 .forEach(System.out::println);
