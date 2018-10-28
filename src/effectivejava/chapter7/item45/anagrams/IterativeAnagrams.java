@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
-// Prints all large anagram groups in a dictionary iteratively (Page 204)
+// 코드 45-1 사전 하나를 훑어 원소 수가 많은 아나그램 그룹들을 출력한다. (269-270쪽)
 public class IterativeAnagrams {
     public static void main(String[] args) throws IOException {
         File dictionary = new File(args[0]);
