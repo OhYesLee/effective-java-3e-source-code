@@ -5,7 +5,7 @@ import effectivejava.chapter6.item39.markerannotation.Test;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-// Program to process marker annotations and repeatable annotations (Page 187)
+// 마커 애너테이션과 반복 가능 애너테이션을 처리하는 프로그램 (244-245쪽)
 public class RunTests {
     public static void main(String[] args) throws Exception {
         int tests = 0;
@@ -19,19 +19,19 @@ public class RunTests {
                     passed++;
                 } catch (InvocationTargetException wrappedExc) {
                     Throwable exc = wrappedExc.getCause();
-                    System.out.println(m + " failed: " + exc);
+                    System.out.println(m + " 실패: " + exc);
                 } catch (Exception exc) {
-                    System.out.println("INVALID @Test: " + m);
+                    System.out.println("잘못 사용한 @Test: " + m);
                 }
             }
 
-            // Processing repeatable annotations (Page 187)
+            // 코드 39-10 반복 가능 애너테이션 다루기 (244-245쪽)
             if (m.isAnnotationPresent(ExceptionTest.class)
                     || m.isAnnotationPresent(ExceptionTestContainer.class)) {
                 tests++;
                 try {
                     m.invoke(null);
-                    System.out.printf("Test %s failed: no exception%n", m);
+                    System.out.printf("테스트 %s 실패: 예외를 던지지 않음%n", m);
                 } catch (Throwable wrappedExc) {
                     Throwable exc = wrappedExc.getCause();
                     int oldPassed = passed;
@@ -44,11 +44,11 @@ public class RunTests {
                         }
                     }
                     if (passed == oldPassed)
-                        System.out.printf("Test %s failed: %s %n", m, exc);
+                        System.out.printf("테스트 %s 실패: %s %n", m, exc);
                 }
             }
         }
-        System.out.printf("Passed: %d, Failed: %d%n",
+        System.out.printf("성공: %d, 실패: %d%n",
                           passed, tests - passed);
     }
 }
