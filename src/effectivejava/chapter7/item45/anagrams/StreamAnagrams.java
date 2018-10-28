@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.groupingBy;
 
-// Overuse of streams - don't do this! (page 205)
+// 코드 45-2 스트림을 과하게 사용했다. - 따라 하지 말 것! (270-271쪽)
 public class StreamAnagrams {
     public static void main(String[] args) throws IOException {
         Path dictionary = Paths.get(args[0]);
