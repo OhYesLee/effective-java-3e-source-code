@@ -1,6 +1,6 @@
 package effectivejava.chapter11.item84;
 
-// Awful CountDownLatch implementation - busy-waits incessantly!  - Pages 336-7
+// 코드 84-1 끔찍한 CountDownLatch 구현 - 바쁜 대기 버전! (447쪽)
 public class SlowCountDownLatch {
     private int count;
 
