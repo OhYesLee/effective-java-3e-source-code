@@ -3,8 +3,7 @@
 <img src="https://github.com/WegraLee/effective-java-3e-source-code/blob/master/EJ3.jpg" width="720">
 
 이 저장소는 『이펙티브 자바 3판』([인사이트](http://blog.insightbook.co.kr/), 2018)의 지원 사이트입니다.
-[한국어판의 정오표는 여기](https://docs.google.com/document/d/1PB9DpFff24MtguO3DYKpW-n6xtSC7NbY5A5_Tm55qMs)에서 확인하실 수 있습니다.
-:red_circle: **[공지]** 본 깃허브 저장소 소스 한글화는 진행 중입니다. 정식 판매 전에 모두 완료하겠습니다.
+한국어판의 [정오표는 여기](https://docs.google.com/document/d/1PB9DpFff24MtguO3DYKpW-n6xtSC7NbY5A5_Tm55qMs)에서 확인하실 수 있습니다.
 
 ---
 
