@@ -3,12 +3,14 @@
 <img src="https://github.com/WegraLee/effective-java-3e-source-code/blob/master/EJ3.jpg" width="720">
 
 이 저장소는 『이펙티브 자바 3판』([인사이트](http://blog.insightbook.co.kr/), 2018)의 지원 사이트입니다.
-
+[한국어판의 정오표는 여기](https://docs.google.com/document/d/1PB9DpFff24MtguO3DYKpW-n6xtSC7NbY5A5_Tm55qMs)에서 확인하실 수 있습니다.
 :red_circle: **[공지]** 본 깃허브 저장소 소스 한글화는 진행 중입니다. 정식 판매 전에 모두 완료하겠습니다.
 
 ---
 
 ## 새소식
+:white_check_mark: **2018.11.05** - [정오표](https://docs.google.com/document/d/1PB9DpFff24MtguO3DYKpW-n6xtSC7NbY5A5_Tm55qMs)를 추가했습니다.
+
 :white_check_mark: **2018.10.28** - 한국어판 출간에 맞춰 본 저장소의 예제 코드 한글화를 모두 끝마쳤습니다.
 
 :white_check_mark: **2018.10.19** - 한국어판이 11월 1일에 드디어 출간됩니다. 원서보다 출간이 상당히 늦어진 점 죄송합니다. 그에 대한 보상이라긴 뭣하지만, 70여 개의 [원서 오류](https://docs.google.com/document/d/1mAeEgQu4H4ADxa03k7YaVDjIP5vJBvjVIjg3DIvoc8E/edit)를 바로잡을 수 있었고 최근 릴리스된 자바 11까지의 변경도 반영했습니다. 저자가 소스코드를 2018년 8월에서야 공개해서 제가 직접 준비하던 것은 버렸는데, 다행히 저자가 공개한 코드가 훨씬 깔끔하네요. ^^
