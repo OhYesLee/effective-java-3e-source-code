@@ -9,6 +9,7 @@
 
 ## 새소식
 :white_check_mark: **2018.11.12** - 출판사에서 이벤트를 진행하네요. [이펙티브 자바 '이판삼판' 이벤트](http://www.insightbook.co.kr/13113). 11월 19일까지입니다. ;)
+
 :white_check_mark: **2018.11.05** - [정오표](https://docs.google.com/document/d/1PB9DpFff24MtguO3DYKpW-n6xtSC7NbY5A5_Tm55qMs)를 추가했습니다.
 
 :white_check_mark: **2018.10.28** - 한국어판 출간에 맞춰 본 저장소의 예제 코드 한글화를 모두 끝마쳤습니다.
